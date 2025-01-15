@@ -25,8 +25,8 @@ public final class Constants {
   public static final class DriveConstants {
     // Driving Parameters - Note that these are not the maximum capable speeds of
     // the robot, rather the allowed maximum speeds
-    public static final double kMaxSpeedMetersPerSecond = 4.8;
-    public static final double kMaxAngularSpeed =  Math.PI / 4; // radians per second
+    public static final double kMaxSpeedMetersPerSecond = 1;
+    public static final double kMaxAngularSpeed =  1; // radians per second // Math.pi / 4
 
     // Chassis configuration
     public static final double kTrackWidth = Units.inchesToMeters(25.5);
@@ -46,19 +46,25 @@ public final class Constants {
     public static final double kBackRightChassisAngularOffset = Math.PI / 2;
 
     // SPARK Flex CAN IDs
-    public static final int kRearLeftDrivingCanId = 3;
-    public static final int kFrontLeftDrivingCanId = 2;
-    public static final int kFrontRightDrivingCanId = 7;
-    public static final int kRearRightDrivingCanId = 6;
-;
-    public static final int kRearLeftTurningCanId = 4;
-    public static final int kFrontLeftTurningCanId = 1;
-    public static final int kFrontRightTurningCanId = 8;
-    public static final int kRearRightTurningCanId = 5;
 
-    public static final int kEncoderFrontLeftCanId = 9;
-    public static final int kEncoderFrontRightCanId = 10;
+    //Rear Left Module
+    public static final int kRearLeftDrivingCanId = 3;
+    public static final int kRearLeftTurningCanId = 4;
     public static final int kEncoderBackLeftCanId = 11;
+
+    //Front Left Module
+    public static final int kFrontLeftDrivingCanId = 2;
+    public static final int kFrontLeftTurningCanId = 1;
+    public static final int kEncoderFrontLeftCanId = 9;
+
+    //Front Right Module
+    public static final int kFrontRightDrivingCanId = 7;
+    public static final int kFrontRightTurningCanId = 8;
+    public static final int kEncoderFrontRightCanId = 10;
+
+    //Rear Right Module
+    public static final int kRearRightDrivingCanId = 6;
+    public static final int kRearRightTurningCanId = 5;
     public static final int kEncoderBackRightCanId = 12;
 
     public static final boolean kGyroReversed = false;
@@ -102,6 +108,6 @@ public final class Constants {
   }
 
   public static final class NeoMotorConstants {
-    public static final double kFreeSpeedRpm = 1800;
+    public static final double kFreeSpeedRpm = 1;
   }
 }
